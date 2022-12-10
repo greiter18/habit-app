@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "index.js",
-    "server": "nodemon index.js",
+    "start": "node index.js",
+    "start:dev": "nodemon --inspect index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -21,6 +22,9 @@
     "validator": "^13.7.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "cors": "^2.8.5",
+    "nodeman": "^1.1.2",
+    "nodemon": "^2.0.20",
+    "request": "^2.88.2"
   }
 }
