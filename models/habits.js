@@ -5,4 +5,5 @@ const HabitSchema = Schema(
 
 )
 
+
 export const Habit = mongoose.model("Habit", HabitSchema);
