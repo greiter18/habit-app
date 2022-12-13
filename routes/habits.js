@@ -4,7 +4,9 @@ const router = express.Router();
 
 router.get("/" , (_,res) => {
   const habits = [
-        { _id: 1, name: "Vladimir Harkonnen", content: "Am I the drama?" },
+        { _id: 1, 
+          name: "Vladimir Harkonnen", 
+          content: "Am I the drama?" },
         {
             _id: 2,
             name: "Lady Jessica",
