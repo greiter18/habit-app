@@ -20,7 +20,10 @@ const UserSchema = Schema(
       required: true
     }
     
-  }
-)
+  }, 
+  // {
+  //   timestamps: true
+  // }
+  )
 
 export const User = mongoose.model("User", UserSchema)
