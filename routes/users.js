@@ -2,7 +2,7 @@ import express from "express";
 
 const router = express.Router();
 import bcrypt from 'bcryptjs';
-import {User}  from '../models/users.js'
+import { User }  from '../models/users.js'
 
 router.get("/", (_,res) => {
 //   const users = [
@@ -44,16 +44,16 @@ router.post('/register', (req,res) => {
           email: req.body.email,
           password: req.body.password
         })
-        // bcrypt.genSalt(10, (err, salt) => {
-        //   bcrypt.hash(newUser.password, salt, (err, hash) => {
-        //     if (err) throw err;
-        //     debugger
-        //     newUser.password = hash;
+
+        bcrypt.genSalt(10, (err, salt) => {
+          bcrypt.hash(newUser.password, salt, (err, hash) => {
+          if (err) throw err;
+            newUser.password = hash;
             newUser.save()
               .then(user => res.json(user))
               .catch(err => console.log('ERROR-----------',err));
-          // })
-      //})
+          })
+       })
       }
   })
 })
